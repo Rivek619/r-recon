@@ -25,7 +25,7 @@ if [ ! -d "$scan_path" ]; then
 fi
 
 echo -e "${RED} [+] Launching subfinder .... ${RESET}"
-subfinder -d $domain > $subdomain_path/found.txt
+subfinder -d $domain -all > $subdomain_path/found.txt
 
 echo -e "${RED} [+] Launching assetfinder .... ${RESET}"
 assetfinder $domain | grep $domain >> $subdomain_path/found.txt
