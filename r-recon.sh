@@ -30,9 +30,8 @@ subfinder -d $domain -all > $subdomain_path/found.txt
 echo -e "${RED} [+] Launching assetfinder .... ${RESET}"
 assetfinder $domain | grep $domain >> $subdomain_path/found.txt
 
-#echo -e "${RED} [+] Launching amass .... ${RESET}"
-#amass enum -d $domain >> $subdomain_path/found.txt
-
+echo -e "${RED} [+] Launching amass .... ${RESET}"
+amass enum -d $domain >> $subdomain_path/found.txt
 
 
 echo -e "${RED} [+] Finding alive subdomains .... ${RESET}"
