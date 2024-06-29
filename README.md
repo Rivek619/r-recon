@@ -9,10 +9,7 @@ chmod +x r-recon.sh
 
 # Use case
 
-./r-recon.sh <domain>
-
-
-
+./r-recon.sh domain
 
 
 ## Authors
