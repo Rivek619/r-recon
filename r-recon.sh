@@ -1,5 +1,25 @@
 #!/bin/bash
 
+display_header() {
+    echo "===================================================================="
+    echo "███████████                                                              "
+    echo "░░███░░░░░███                                                             "
+    echo " ░███    ░███             ████████   ██████   ██████   ██████  ████████  "
+    echo " ░██████████   ██████████░░███░░███ ███░░███ ███░░███ ███░░███░░███░░███ "
+    echo " ░███░░░░░███ ░░░░░░░░░░  ░███ ░░░ ░███████ ░███ ░░░ ░███ ░███ ░███ ░███ "
+    echo " ░███    ░███             ░███     ░███░░░  ░███  ███░███ ░███ ░███ ░███ "
+    echo " █████   █████            █████    ░░██████ ░░██████ ░░██████  ████ █████"
+    echo "░░░░░   ░░░░░            ░░░░░      ░░░░░░   ░░░░░░   ░░░░░░  ░░░░ ░░░░░ "
+    echo "                                                                          "
+    echo "                                                                          "
+    echo "   - Rivek Raj Tamang"
+    echo "===================================================================="
+}
+
+display_header
+
+#MainScript
+
 domain=$1
 RED="\033[1;31m"
 RESET="\033[0m"
@@ -32,6 +52,7 @@ assetfinder $domain | grep $domain >> $subdomain_path/found.txt
 
 echo -e "${RED} [+] Launching amass .... ${RESET}"
 amass enum -d $domain >> $subdomain_path/found.txt
+
 
 
 echo -e "${RED} [+] Finding alive subdomains .... ${RESET}"
