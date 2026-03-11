@@ -44,13 +44,13 @@ if [ ! -d "$scan_path" ]; then
 	mkdir $scan_path
 fi
 
-echo -e "${RED} [+] Launching subfinder .... ${RESET}"
+echo -e "${RED} [+] Launching and running subfinder .... ${RESET}"
 subfinder -d $domain -all > $subdomain_path/found.txt
 
-echo -e "${RED} [+] Launching assetfinder .... ${RESET}"
+echo -e "${RED} [+] Launching and running assetfinder .... ${RESET}"
 assetfinder $domain | grep $domain >> $subdomain_path/found.txt
 
-echo -e "${RED} [+] Launching amass .... ${RESET}"
+echo -e "${RED} [+] Launching and running amass .... ${RESET}"
 amass enum -d $domain >> $subdomain_path/found.txt
 
 
